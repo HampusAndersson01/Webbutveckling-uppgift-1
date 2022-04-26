@@ -1,0 +1,18 @@
+*,
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #202124;
+}
+
+#bodyMain {
+  margin-left: 0;
+  margin-right: 0;
+  width: 100vw;
+  margin-top: 10vw;
+  text-align: center;
+}
+#logo {
+  width: 20vw;
+  max-width: 272px;
+}
