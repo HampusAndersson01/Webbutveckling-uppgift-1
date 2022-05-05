@@ -1,11 +1,12 @@
 @import url("http://fonts.cdnfonts.com/css/product-sans");
 
+/* Main Body */
 *,
 body {
   margin: 0;
   padding: 0;
   background-color: #202124;
-  box-sizing: content-box;
+  box-sizing: border-box;
   font-family: "Product Sans", sans-serif;
 }
 .material-symbols-outlined {
@@ -26,11 +27,11 @@ body {
 }
 #search {
   margin: 2vw 0;
-  border: #53565b 1px solid;
+  border: #969ca1 1px solid;
   border-radius: 2.7vw;
   max-width: 582px;
   width: calc(50vw + 34px + 34px);
-  max-height: 44px;
+  max-height: 40px;
   height: 5vw;
   display: grid;
   grid-template-columns: 1fr minmax(auto, 487px) 1fr;
@@ -63,21 +64,21 @@ body {
   margin: auto;
 }
 #magnifyingGlass svg {
-  fill: #53565b;
+  fill: #969ca1;
 }
 #searchButtons-div {
 }
 #searchButtons-div button {
-  color: #e3e4e8;
+  color: white;
   padding: 0.5vw 0.7vw;
   margin: 0.5vw;
   border: none;
   background-color: #303134;
-  border-radius: 0.4vw;
+  border-radius: 0.3vw;
   border: solid 1px transparent;
 }
 #searchButtons-div button:hover {
-  border: #53565b 1px solid;
+  border: #969ca1 1px solid;
 }
 #languageText {
   color: #b3afa4;
@@ -87,4 +88,90 @@ body {
 #languageText a {
   text-decoration: none;
   color: #6f9ce4;
+}
+
+/* Header */
+.headerLink {
+  color: white;
+  text-decoration: none;
+  float: right;
+}
+header {
+  width: 100vw;
+  height: 4vw;
+  display: grid;
+  grid-template-columns: 85vw 1fr 1fr 1fr 1fr;
+  grid-template-areas: "none gmail images apps account";
+  text-align: center;
+  line-height: 4vw;
+}
+#imagesLink {
+  grid-area: images;
+}
+#gmailLink {
+  grid-area: gmail;
+}
+#account {
+  height: 30px;
+  width: 30px;
+  background-color: white;
+  border-radius: 50%;
+  grid-area: account;
+  margin: 0 auto;
+  margin: calc((4vw - 30px) / 2) auto;
+}
+#apps {
+  grid-area: apps;
+  color: white;
+  height: 25px;
+  margin: calc((4vw - 25px) / 2) 0;
+}
+
+/* Footer */
+
+footer {
+  background-color: #171717;
+  height: 5vw;
+  width: 100vw;
+  position: fixed;
+  bottom: 0%;
+  color: #818489;
+  text-decoration: none;
+  font-size: 14px;
+}
+footer a:hover {
+  text-decoration: underline;
+}
+footer div {
+  background-color: #171717;
+  color: #818489;
+  float: left;
+  line-height: 2.5vw;
+  padding: 0.2vw;
+  text-decoration: none;
+}
+#footerT {
+  width: 100vw;
+  height: 2.5vw;
+  text-align: left;
+}
+#footerBL {
+  height: 2.5vw;
+  width: 40vw;
+}
+#footerM {
+  height: 2.5vw;
+  width: 20vw;
+  text-align: center;
+}
+#footerBR {
+  height: 2.5vw;
+  width: 40vw;
+  text-align: right;
+}
+#co2Image {
+  height: 14px;
+}
+footer hr {
+  height: 1px;
 }
