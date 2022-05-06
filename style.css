@@ -16,23 +16,21 @@ body {
 #bodyMain {
   margin-left: auto;
   margin-right: auto;
-  width: calc(50vw + 34px + 34px);
-  max-width: 584px;
-  margin-top: 10vw;
+  width: 584px;
+  margin-top: 20vh;
   text-align: center;
 }
 #logo {
-  width: 20vw;
+  width: 40vh;
   max-width: 272px;
 }
 #search {
   margin: 2vw 0;
   border: #969ca1 1px solid;
-  border-radius: 2.7vw;
-  max-width: 582px;
-  width: calc(50vw + 34px + 34px);
-  max-height: 40px;
-  height: 5vw;
+  border-radius: 3.5vh;
+  width: 582px;
+  max-height: 45px;
+  height: 7vh;
   display: grid;
   grid-template-columns: 1fr minmax(auto, 487px) 1fr;
   padding: 0.2vw 0;
@@ -41,7 +39,7 @@ body {
   max-width: 487px;
   width: 50vw;
   max-height: 34px;
-  height: 4vw;
+  height: 7vh;
   border: none;
   margin: auto;
   color: #e8eaed;
@@ -53,29 +51,33 @@ body {
 #magnifyingGlass,
 #searchBarSpeech svg,
 #magnifyingGlass svg {
-  height: 3vw;
+  height: 3vh;
   max-height: 24px;
-  width: 3vw;
+  width: 3vh;
   max-width: 24px;
 }
 #searchBarSpeech,
 #magnifyingGlass {
   display: block;
-  margin: auto;
+  margin: auto 1vh;
 }
 #magnifyingGlass svg {
   fill: #969ca1;
 }
 #searchButtons-div {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
 }
 #searchButtons-div button {
   color: white;
-  padding: 0.5vw 0.7vw;
-  margin: 0.5vw;
+  padding: 8px 16px;
+  margin: 1.5vh;
   border: none;
   background-color: #303134;
-  border-radius: 0.3vw;
+  border-radius: 4px;
   border: solid 1px transparent;
+  font-size: 14px;
 }
 #searchButtons-div button:hover {
   border: #969ca1 1px solid;
@@ -90,6 +92,17 @@ body {
   color: #6f9ce4;
 }
 
+@media only screen and (max-width: 584px) {
+  #search {
+    width: 95%;
+    margin: 0 auto;
+  }
+  #bodyMain {
+    width: 100vw;
+    min-width: 350px;
+  }
+}
+
 /* Header */
 .headerLink {
   color: white;
@@ -97,47 +110,58 @@ body {
   float: right;
 }
 header {
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: row;
   width: 100vw;
-  height: 4vw;
-  display: grid;
-  grid-template-columns: 85vw 1fr 1fr 1fr 1fr;
-  grid-template-areas: "none gmail images apps account";
+  height: 6vh;
   text-align: center;
-  line-height: 4vw;
+  line-height: 6vh;
+  gap: 1vw;
+  padding: 0 1vw;
 }
-#imagesLink {
-  grid-area: images;
+#imagesLink:hover {
+  text-decoration: underline;
 }
-#gmailLink {
-  grid-area: gmail;
+#gmailLink:hover {
+  text-decoration: underline;
 }
+#account:hover {
+  text-decoration: underline;
+}
+#apps:hover {
+  text-decoration: underline;
+}
+
 #account {
   height: 30px;
   width: 30px;
   background-color: white;
   border-radius: 50%;
-  grid-area: account;
-  margin: 0 auto;
-  margin: calc((4vw - 30px) / 2) auto;
+  margin: auto 0;
 }
 #apps {
-  grid-area: apps;
   color: white;
   height: 25px;
-  margin: calc((4vw - 25px) / 2) 0;
+  margin: calc((6vh - 25px) / 2) 0;
 }
 
 /* Footer */
 
 footer {
   background-color: #171717;
-  height: 5vw;
   width: 100vw;
   position: fixed;
   bottom: 0%;
   color: #818489;
   text-decoration: none;
   font-size: 14px;
+  font-weight: 300;
+}
+footer a {
+  text-decoration: none;
+  color: #818489;
+  background-color: #171717;
 }
 footer a:hover {
   text-decoration: underline;
@@ -150,28 +174,73 @@ footer div {
   padding: 0.2vw;
   text-decoration: none;
 }
-#footerT {
+#footerB {
+  padding: 0 30px;
   width: 100vw;
-  height: 2.5vw;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 15vw;
+  row-gap: 0;
+}
+#footerT {
+  padding: 0 30px;
+  width: 100vw;
+  height: 5vh;
+  line-height: 5vh;
   text-align: left;
+  border-bottom: 1px solid #1a1c1d;
 }
 #footerBL {
-  height: 2.5vw;
-  width: 40vw;
+  display: flex;
+  line-height: 5vh;
+  height: 5vh;
+  flex-grow: 3;
+  flex-basis: 0;
+  justify-content: space-between;
 }
 #footerM {
-  height: 2.5vw;
-  width: 20vw;
+  height: 5vh;
+  line-height: 5vh;
   text-align: center;
+  flex-grow: 2;
+  flex-basis: 0;
+  justify-content: center;
+  overflow: visible;
+  white-space: nowrap;
 }
 #footerBR {
-  height: 2.5vw;
-  width: 40vw;
+  display: flex;
+  height: 5vh;
+  line-height: 5vh;
   text-align: right;
+  flex-grow: 2;
+  flex-basis: 0;
+  justify-content: space-between;
+}
+#spacer {
+  flex-grow: 0;
+  flex-basis: 0;
 }
 #co2Image {
   height: 14px;
 }
-footer hr {
-  height: 1px;
+@media only screen and (max-width: 850px) {
+  #footerB {
+    flex-direction: column;
+    gap: 0;
+  }
+  #footerBL {
+    order: 2;
+    flex-wrap: nowrap;
+  }
+  #footerM {
+    order: 1;
+    flex-wrap: nowrap;
+  }
+  #footerBR {
+    order: 3;
+    flex-wrap: nowrap;
+  }
 }
