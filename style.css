@@ -181,7 +181,7 @@ footer div {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
-  gap: 15vw;
+  gap: 10vw;
   row-gap: 0;
 }
 #footerT {
