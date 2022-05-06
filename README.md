@@ -8,28 +8,28 @@ Skapad av **Hampus Andersson**
 
 ### Kopia
 
-![alt text](Readme_Images\Kopiadator.png)
+![alt text](Readme_Images/Kopiadator.png)
 
 ### Original
 
-![alt text](Readme_Images\originaldator.png)
+![alt text](Readme_Images/originaldator.png)
 
 ## Surfplatta
 
 ### Kopia
 
-![image info](Readme_Images\Kopiasurfplatta.png)
+![image info](Readme_Images/Kopiasurfplatta.png)
 
 ### Original
 
-![image info](Readme_Images\Originalsurfplatta.png)
+![image info](Readme_Images/Originalsurfplatta.png)
 
 ## Telefon
 
 ### Kopia
 
-![image info](Readme_Images\Kopiatelefon.png)
+![image info](Readme_Images/Kopiatelefon.png)
 
 ### Original
 
-![image info](Readme_Images\Originaltelefon.png)
+![image info](Readme_Images/Originaltelefon.png)
